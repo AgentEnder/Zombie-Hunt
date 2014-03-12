@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="75" height="75" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="Tiles" tilewidth="16" tileheight="16" spacing="1">
+  <image source="Tileset.png" width="186" height="135"/>
+  <tile id="6">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="Solid" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="75" height="75">
+  <data encoding="base64" compression="zlib">
+   eJztm01TFDEQhgMip1URDuLHTUFEqlAXtUp3Ff3/P8oeJLWxzaQ7s51NZuY9PBdYpthnOpNOd8+1c+41EPlAnBCPgMgxXMEVXMHVjrgg3gq8g6s7lsQngSVcwVUmK4WrFVzdcaZwdQZXs3d1QDwkDuFK5DFxRDxT+pqzqxfEg3tfTxWfXytcrSfqquNJhqs55gz+OdXx3G3WofTsatVV+H20z97cWIqxGJmrg+B+a9fHEFd7xEvGq8Tf/XDyefDnjl3x+17KlfV1JUq4CvenPeFeD73+foHr1nDlv4+0JsbGGPfBFLm5/JxdlXyWteiqi43TCJpYKbn2W3Tlz3kc7bmvFK25CnOzS+I9ceV0uebcXIUxdUv8In7DlejKE8YXXG0I81jPZ+IL8RWu/oPH1q3brMVcV5b5Vouu/BmGx1fOeck7yqnZjNEVd+bJyZnCOodV3tGyqyHwelBujWsurjSetomtKbnqy/etYguu4Mrvm7H91NIVn1P66P72GD3nTj+ztEt4HrsIfs6dWbnSzJNoZ0skUvNjQ+5B6Iv7COPOypWml63ta0uk+lCp/lMK78T78PWwcI+Eq39d+Vw9lkfAlS7HGtpbirnSzEho5yV27UqTN1jm7bw/K+2DqV6tRGofGbJnSK626VfWzq9S633I2uZ5g8+xhpy/p+6Kx5ZlbXCKrsJajmXvq7ar1LP9puL/1aKr1JzPNnvGFF2NCbiCK7iCq7FQ0lXJWeSpuQrz564+kjNH1SIlXPGeb0tzVGEdltcEpJqstatY/SjWI6g1w6F5H6CvHmTpqs+TP5OVOtPmoO0lxOpBVq766pGLnt/XcqWt+cbO7VauUjOevC8AV/qeL1zpPZV470SLtpcQ6yHUcFVzjrGFfVDrqmZMdYT1slTPJVY7s3IVm4mN5VhjfpfJMr/iM4tW/ZNWQJ0BruAKrsYCXMEVXNV39Y14A0S+E38ARZBrCg==
+  </data>
+ </layer>
+</map>
