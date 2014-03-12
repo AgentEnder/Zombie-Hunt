@@ -1,0 +1,44 @@
+h1. Introduction
+
+HS2 is a simple and flexible high score table library for LÖVE. To load, do:
+
+<code>HS2 = require 'hs2'</code>
+
+h1. The Functions
+
+<code>hs = hs2.load(fname, places, name, score)</code>
+
+Loads the high score table from fname. If it does not exist, it creates a new one with the specified number of places and default name and score. *Note:* high score tables do not have a limit on the number of entries they can have! *Returns a high score table object.*
+
+<code>hs:add(name, score)</code>
+
+Adds a new entry to the high score table with the specified name and score.
+
+<code>hs:save()</code>
+
+Saves the high score table to the filename you specified in hs2.load().
+
+<code>hs:cycle()</code>
+
+Returns an iterator that goes through each entry of the high score table and returns place, name, and score. Useful for drawing high score tables, and works just like the one in SICK:
+
+<pre><code>for i, name, score in hs:cycle() do
+    love.graphics.print(i..'. '..name, 10, 20 * i)
+    love.graphics.print(score, 300, 20 * i)
+end</code></pre>
+
+h2. Some Shortcut Functions
+
+These are just for convenience.
+
+<code>hs:get(pos)</code>
+
+Returns the name and score at the specified position of the table.
+
+<code>hs:len()</code>
+
+Returns the number of entries in the high score table.
+
+<code>hs:filename()</code>
+
+Returns the name of the file in which the high score table is stored.

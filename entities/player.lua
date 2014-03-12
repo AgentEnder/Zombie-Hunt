@@ -20,6 +20,7 @@ function ent:load( x, y )
 	player.invincibleTimer = 0
 	player.score = 0
 	player.meleetimer = 0
+	player.hitTimer = 0
 end
 
 function ent:setPos( x, y )
@@ -146,11 +147,17 @@ function ent:update(dt)
 		self.x = 400
 		self.y = 300
 	end
+	if player.hitTimer > 0 then player.hitTimer = player.hitTimer - .5 end
+end
+
+function RandomAngle()
+	return (love.math.random(0,2) * math.pi)
 end
 
 function ent:draw()
 	love.graphics.setColor( 255, 255, 255, 255 )
 	love.graphics.draw( self.image, self.x, self.y, self.angle, self.size*2, self.size*2, 8, 8 )
+	if player.hitTimer > 0 then love.graphics.print("Hit",self.x,self.y, RandomAngle() , 2, 2) end
 	Pready = true
 end
 
@@ -158,6 +165,8 @@ function ent:die()
 	ents.Destroy(self.id)
 	rs()
 	player.health = 20
+	name = getDate()
+	hs:add(name, player.score)
 	enableState("replay")
 end
 

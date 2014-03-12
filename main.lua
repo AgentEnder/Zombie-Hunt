@@ -4,6 +4,7 @@ require("/libraries/stateManager")
 require("/libraries/lovelyMoon")
 ATL.Loader.path = 'maps/'
 HC = require ('/libraries/hardoncollider')
+HS2 = require('/libraries/HS2/hs2')
 --GameStates
 require("/states/gameState")
 require("/states/menuState")
@@ -19,6 +20,9 @@ function love.load()
 	addState(replay, "replay")
 	--Remember to Enable your Gamestates!
 	enableState("menu")
+	
+	--High Scores
+	hs = HS2.load("/HighScores.rtf", 10, "Player", 50)
 end
 
 function love.update(dt)
@@ -37,7 +41,16 @@ function love.keyreleased(key, unicode)
 	lovelyMoon.keyreleased(key, unicode)
 end
 
+function getDate()
+	date = os.time()
+	return (os.date("%x", date))
+      --> 09/16/1998
+end
+
 function love.mousepressed(x, y, button)
+	if button == "m" then 
+		print (hs:filename())
+	end
 	lovelyMoon.mousepressed(x, y, button)
 end
 

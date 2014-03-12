@@ -40,26 +40,36 @@ end
 function ent:chase()
 	if player.x < self.x then
 		self.x = self.x - 1.5
-		self.direction = 3
+		self.direction = 1
 		self.angle = self.direction*0.5*math.pi
 	end
 
 	if player.x > self.x then
 		self.x = self.x + 1.5
-		self.direction = 1
+		self.direction = 3
 		self.angle = self.direction*0.5*math.pi
 	end
 
 	if player.y < self.y then
-		self.direction = 0
+		self.direction = 2
 		self.angle = self.direction*0.5*math.pi
 		self.y = self.y - 1.5
 	end
 
 	if player.y > self.y then
-		self.direction = 2
+		self.direction = 0
 		self.angle = self.direction*0.5*math.pi
 		self.y = self.y + 1.5
+	end
+	if player.y == self.y then
+		if player.x < self.x then
+			self.direction = 1
+			self.angle = self.direction*0.5*math.pi
+			
+		elseif player.x > self.x then
+			self.direction = 3
+			self.angle = self.direction*0.5*math.pi
+		end
 	end
 end
 
@@ -115,6 +125,7 @@ function ent:update(dt)
 		if self.health <= 0 then
 			player.score = player.score + 5
 			ent:die(melee)
+			player.hitTimer = 5
 		end
 	elseif player.melee == true and insideBox(player.x - 8, player.y + 8, self.x-50, self.y-50, 100, 100) == true then
 		self.health = self.health - love.math.random(2,3)
@@ -122,6 +133,7 @@ function ent:update(dt)
 		if self.health <= 0 then
 			ent:die(melee)
 			player.score = player.score + 5
+			player.hitTimer = 5
 		end
 	elseif player.melee == true and insideBox(player.x + 8, player.y + 8, self.x-50, self.y-50, 100, 100) == true then
 		self.health = self.health - love.math.random(2,3)
@@ -129,6 +141,7 @@ function ent:update(dt)
 		if self.health <= 0 then
 			player.score = player.score + 5
 			ent:die(melee)
+			player.hitTimer = 5
 		end
 	elseif player.melee == true and insideBox(player.x + 8, player.y - 8, self.x-50, self.y-50, 100, 100) == true then
 		self.health = self.health - love.math.random(2,3)
@@ -136,6 +149,7 @@ function ent:update(dt)
 		if self.health <= 0 then
 			player.score = player.score + 5
 			ent:die(melee)
+			player.hitTimer = 5
 		end
 	end
 	if self.x < 8 or self.x > 1200-8 or self.y < 8 or self.y > 1200-8 then
@@ -145,7 +159,7 @@ end
 
 function ent:die(reason)
 	if reason ==  bounds then 
-		ents.Create("zombie", 300+love.math.random(10,300), 500+ love.math.random(10,300))
+		ents.Create("zombie", love.math.random(32,1200-32), 500+ love.math.random(32,1200-32))
 	elseif reason == melee then 
 		print ("melee")
 		table.insert(zombiesDead, self)

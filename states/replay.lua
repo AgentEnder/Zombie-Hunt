@@ -26,6 +26,7 @@ end
 --Enable
 function replay:enable()
 	disableState("stage1")
+	hs:save()
 end
 
 --Disable
@@ -41,6 +42,10 @@ function replay:draw()
 	love.graphics.setColor(255,255,255)
 	love.graphics.print("Press Enter to Play Again!", 64, 64)
 	love.graphics.print("Press Escape to Quit !", 64, 96)
+	for i, name, score in hs:cycle() do
+		love.graphics.print(i..'. '..name, 10, 90 + 20 * i)
+		love.graphics.print(score, 300, 90 + 20 * i)
+	end
 end
 
 --KeyPressed
